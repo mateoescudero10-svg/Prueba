@@ -30,3 +30,4 @@ Notas:
 - La app usa la API pública de CheapShark: `https://www.cheapshark.com/api/1.0`.
 Commit 1 - 2025-11-19 20:49:53
 Commit 2 - 2025-11-19 20:49:53
+Commit 3 - 2025-11-19 20:49:53
