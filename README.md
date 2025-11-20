@@ -29,3 +29,4 @@ Notas:
 - `src/input.css` contiene las directivas de Tailwind. El archivo `public/output.css` incluido es un fallback mínimo; para obtener todas las utilidades de Tailwind debe compilarse con la CLI.
 - La app usa la API pública de CheapShark: `https://www.cheapshark.com/api/1.0`.
 Commit 1 - 2025-11-19 20:49:53
+Commit 2 - 2025-11-19 20:49:53
