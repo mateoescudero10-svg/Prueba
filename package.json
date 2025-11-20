@@ -1,0 +1,13 @@
+{
+  "name": "examen-final-practico-apps-web",
+  "version": "1.0.0",
+  "description": "Proyecto de examen final práctico - Aplicaciones Web (Tailwind + JS)",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/output.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.0"
+  }
+}

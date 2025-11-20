@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tienda PixelSale — Ofertas de videojuegos</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🎮%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./dark-helpers.css">
+  </head>
+  <body class="bg-slate-900 text-slate-100 min-h-screen">
+    <header class="bg-slate-800 border-b shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center gap-4">
+        <div class="flex items-center gap-3 mr-4">
+          <div class="text-3xl">🎮</div>
+          <div>
+            <h1 class="text-2xl font-semibold text-amber-400">PixelSale</h1>
+            <p class="text-sm text-slate-300">Ofertas y descuentos en videojuegos</p>
+          </div>
+        </div>
+
+        <form id="searchForm" class="flex-1 max-w-2xl mx-auto" role="search" aria-label="Buscar juegos">
+          <label for="searchInput" class="sr-only">Buscar juegos</label>
+          <div class="flex gap-2">
+            <input id="searchInput" name="q" type="search" placeholder="Buscar por nombre..." class="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+            <button id="searchBtn" type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md shadow">Buscar</button>
+          </div>
+        </form>
+
+        <div class="flex gap-2 items-center ml-4">
+          <label for="storeSelect" class="sr-only">Filtrar por tienda</label>
+          <select id="storeSelect" class="px-2 py-2 border rounded-md bg-white">
+            <option value="">Todas las tiendas</option>
+            <option value="1">Steam</option>
+            <option value="3">Epic Games</option>
+            <option value="2">GOG</option>
+            <option value="6">Humble</option>
+          </select>
+          <label for="sortSelect" class="sr-only">Ordenar</label>
+          <select id="sortSelect" class="px-2 py-2 border rounded-md bg-white">
+            <option value="">Ordenar</option>
+            <option value="priceAsc">Precio (asc)</option>
+            <option value="priceDesc">Precio (desc)</option>
+            <option value="normalAsc">Precio normal (asc)</option>
+            <option value="normalDesc">Precio normal (desc)</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-6">
+      <div id="indicators" class="mb-4 flex items-center gap-4">
+        <div id="loading" class="hidden items-center gap-2 text-sm text-slate-600">
+          <div class="w-5 h-5 border-4 border-slate-200 rounded-full spinner"></div>
+          <span>Cargando...</span>
+        </div>
+        <div id="error" class="hidden text-sm text-red-600"></div>
+      </div>
+
+      <section>
+        <div id="gamesGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-0"></div>
+      </section>
+
+      <div class="mt-6 text-center">
+        <button id="loadMoreBtn" class="px-4 py-2 bg-white border rounded-md shadow">Ver más</button>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4">
+      <div class="bg-white rounded-md max-w-2xl w-full p-4">
+        <button id="closeModal" class="ml-auto block text-slate-500">Cerrar ✕</button>
+        <div id="modalContent" class="mt-2"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
